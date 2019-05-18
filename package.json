@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Avalineai/12-bamazon#readme",
   "dependencies": {
+    "cli-table": "^0.3.1",
     "inquirer": "^6.3.1",
     "mysql": "^2.17.1"
   }
