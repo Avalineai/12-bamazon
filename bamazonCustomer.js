@@ -31,34 +31,19 @@ function customerContent() {
         //const transformed = results.reduce((acc, {index, ...x}) => { acc[index] = x; return acc}, {})
         //console.log(results)
         console.log("\n\n")
-        var table = new Table();
-        // table.push(
-        //     { 'Left Header 1': ['Value Row 1 Col 1', 'Value Row 1 Col 2'] }
-        //     , { 'Left Header 2': ['Value Row 2 Col 1', 'Value Row 2 Col 2'] }
-        // );
+        //var table = new Table();
         var table = new Table({
             head: ['Id', 'Product Name', 'Price']
         , colWidths: [4, 40, 10]
         });
         results.forEach(function (item) {
-            //console.log(item.item_id)
-            //console.log(item.product_name)
-            // console.log("$", item.price)
-            //var itemId = item.item_id
-            //console.log("#", item.item_id + " " + item.product_name + " " + "$", item.price)
             table.push([item.item_id, item.product_name, "$"+item.price]); 
-            //console.log(item.RowDataPacket.item_id)
         })
         console.log(table.toString());
-        //console.log("\n\n")
-        //console.table(results)
-        //console.table(transformed)
-        //console.log(results)
-        //console.log(results.RowDataPacket)
     })
 }
 function start() {
-    //tableContent();
+//tableContent();
     inquirer
         .prompt({
             name: "buyOrQuit",
@@ -121,7 +106,6 @@ function showItems() {
                     newQty = originalQty - answer.buy
                     purchaseTotal = answer.buy * itemPrice
                     purchaseTotalFinal = purchaseTotal.toFixed(2)
-
                     // console.log("Item qty Left " + newQty)
                     connection.query(
                         "UPDATE products SET ? WHERE ?",
@@ -142,7 +126,6 @@ function showItems() {
                             start();
                         }
                     );
-
                 }
                 else {
                     console.log("Insufficient quantity!...Please Choose Again");
