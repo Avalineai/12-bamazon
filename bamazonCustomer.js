@@ -112,7 +112,7 @@ function showItems() {
                 var purchaseTotal
                 var purchaseTotalFinal
                 if (answer.buy > chosenItem.stock_quantity) {
-                    console.log("Insufficient quantity!...Please Choose Smaller Quantity!");
+                    console.log("Insufficient quantity!...Please Try Again!");
                     start();
                 }
                 else if (chosenItem.stock_quantity > 0) {

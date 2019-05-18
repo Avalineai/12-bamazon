@@ -44,6 +44,10 @@
 ![App Photo 3](bamazon3.png)
 * View Total and Restart Options:
 ![App Photo 4](bamazon4.png)
+* Updated Database with Qty changes, and Item with 0 Quantity:
+![App Photo 5](bamazon5.png)
+* View Out of Stock Message when choosing Item with 0 Quantity and Restart Options:
+![App Photo 6](bamazon6.png)
 
 * Bamazon App Video:
 
